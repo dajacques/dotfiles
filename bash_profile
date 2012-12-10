@@ -9,10 +9,11 @@ fi
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 # export PS1="\[\033];\l\007\033]2;\w\007\]\W\$(__git_ps1) \$ "
-export PS1="\[\033];\l\007\033]2;\w\007\]\W\[\e[1;32m\]\$(__git_ps1)\[\e[0m\] \$ "
+# export PS1="\[\033];\l\007\033]2;\w\007\]\W\[\e[1;32m\]\$(__git_ps1)\[\e[0m\] \$ "
+export PS1="\[\033];\l\007\033]2;\w\007\]\W\[\e[1;32m\]\[\e[0m\] \$ "
 export TERM=xterm
 export CLICOLOR=1
-export LSCOLORS='DxGxcxdxcxegedabagacad'
+export LSCOLORS='dxgxcxdxcxegedabagacad'
 
 export DYLD_LIBRARY_PATH="/opt/oracle/instantclient-latest"
 export SQLPATH="/opt/oracle/instantclient-latest"

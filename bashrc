@@ -1,12 +1,21 @@
 # .bashrc
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
+if [ -f /etc/bashrc ]
+then
   . /etc/bashrc
 fi
 
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]
+then
   . /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+
+if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]
+then
+  . /usr/local/opt/chruby/share/chruby/chruby.sh
+  RUBIES=(/Users/djacqu001/rubies/*)
+  chruby 1.9.3-p327
 fi
 
 APACHE_HOME=/opt/local/apache2
