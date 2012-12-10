@@ -1,0 +1,60 @@
+[user]
+	name = David Jacques
+	email = David_Jacques@cable.comcast.com
+[github]
+	user = dajacques
+[http]
+	sslVerify = false
+[core]
+	editor = sublime --wait
+[color]
+  ui = auto
+  diff = auto
+[color "branch"]
+  current = green
+  local = white bold
+  remote = white bold
+[color "diff"]
+  meta = white bold
+  frag = cyan bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green bold
+  changed = green bold
+  untracked = yellow bold
+[log]
+  date = relative
+[format]
+  pretty = format:%C(yellow)%h %C(cyan)%cn%x09%C(bold green)%d %Creset%s %C(red)(%ad)
+[alias]
+  a = !git add --all && git s
+  b = branch
+  bd = branch -d
+  bdd = branch -D
+  c = commit -m
+  co = checkout
+  cob = checkout -b
+  com = checkout master
+  cor = checkout release
+  d = diff
+  l = log --max-count=36 --no-merges
+  lg = log --max-count=36 --no-merges --graph
+  ll = log --graph
+  m = merge
+  pom = push origin master
+  r = rebase
+  rem = rebase master
+  remi = rebase -i master
+  s = status -sb
+
+#  l = log --max-count=36 --graph --pretty=format:'%C(yellow)%h%x09%C(cyan bold)%cn%x09%C(green)%cr%x09%Creset%s' --no-merges
+#  l = log --max-count=36 --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan bold)%cn%Creset %C(green)%cr%Creset %C(yellow bold)%d%Creset %s' --abbrev-commit --date=local --no-merges
+#  l = log --max-count=36 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit --date=relative --no-merges
+#  sd = svn dcommit
+#  sr = !git svn rebase
+#  srb = !git sr && bundle && bundle exec rake db:migrate
+
+#  up = !git fetch origin && git rebase origin/master
+#  ir = !git rebase -i origin/master
+#  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
