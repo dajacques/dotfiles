@@ -22,7 +22,7 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 PATH=$DYLD_LIBRARY_PATH:$PATH
 
 PATH=/usr/local/bin:$PATH
-PATH=$HOME/bin:$PATH
+PATH=$HOME/bin:$HOME/Dropbox/Comcast/bin:$PATH
 export PATH
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home

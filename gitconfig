@@ -16,17 +16,17 @@
   remote = white bold
 [color "diff"]
   meta = white bold
-  frag = cyan bold
-  old = red bold
-  new = green bold
+  frag = cyan
+  old = red
+  new = green
 [color "status"]
-  added = green bold
-  changed = green bold
-  untracked = yellow bold
+  added = green
+  changed = cyan
+  untracked = yellow
 [log]
   date = relative
 [format]
-  pretty = format:%C(yellow)%h %C(cyan)%cn%x09%C(bold green)%d %Creset%s %C(red)(%ad)
+  pretty = format:%C(yellow)%h %C(cyan)%cn%x09%C(green)%d %Creset%s %C(red)(%ad)
 [alias]
   a = !git add --all && git s
   b = branch
