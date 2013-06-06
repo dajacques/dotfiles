@@ -15,34 +15,42 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]
 then
   . /usr/local/opt/chruby/share/chruby/chruby.sh
   RUBIES=(/Users/djacqu001/rubies/*)
-  chruby 1.9.3-p327
+  chruby 1.9.3-p392
 fi
 
 APACHE_HOME=/opt/local/apache2
-ITRC_HOME=/Users/djacqu001/dev/itrc2
+ITRC_HOME=/Users/djacqu001/dev/itrc
 
 # User specific aliases and functions
-alias env="env | sort"
-alias gems-reindex="ssh -q -t gems PATH=/opt/ruby-1.9.2-p180-gems/bin:\$PATH sudo /opt/amtools/bin/geminabox-reindex.rb"
-# alias nginx="sudo kill -HUP \`cat /opt/nginx/logs/nginx.pid\`"
-alias nginx="[[ -f /opt/nginx/logs/nginx.pid ]] && sudo kill -HUP \`cat /opt/nginx/logs/nginx.pid\` || sudo /opt/nginx/sbin/nginx"
-alias randompass="openssl rand -base64 6"
-alias retitle="echo -e \"\\033];\$(basename \$(pwd))\\007\""
+#alias env="env | sort"
+#alias gems-reindex="ssh -q -t gems PATH=/opt/ruby-1.9.2-p180-gems/bin:\$PATH sudo /opt/amtools/bin/geminabox-reindex.rb"
+## alias nginx="sudo kill -HUP \`cat /opt/nginx/logs/nginx.pid\`"
+#alias nginx="[[ -f /opt/nginx/logs/nginx.pid ]] && sudo kill -HUP \`cat /opt/nginx/logs/nginx.pid\` || sudo /opt/nginx/sbin/nginx"
+#alias randompass="openssl rand -base64 6"
+#alias retitle="echo -e \"\\033];\$(basename \$(pwd))\\007\""
+
+#alias router="telnet 192.168.11.1"
+#alias storage="telnet 192.168.11.2"
 
 # rails aliases
-alias b="bundle"
-alias be="bundle exec"
-alias bm="bundle && bundle exec rake db:migrate"
-alias bmt="bundle && bundle exec rake db:migrate && bundle exec rake test"
-alias clone="bundle exec rake db:test:clone"
-alias console="bundle exec rails console"
-alias guard="bundle exec guard"
-alias litrc="tail -f $ITRC_HOME/log/development.log"
-alias migrate="bundle exec rake db:migrate"
-alias migration="bundle exec rails generate migration"
-alias rollback="bundle exec rake db:rollback"
-#alias test="bundle exec rake test"
-alias test="bundle exec ruby -Itest"
+#alias b="bundle"
+#alias be="bundle exec"
+#alias bm="bundle && bundle exec rake db:migrate"
+#alias bmt="bundle && bundle exec rake db:migrate && bundle exec rake test"
+#alias clone="bundle exec rake db:test:clone"
+#alias console="bundle exec rails console"
+#alias guard="bundle exec guard"
+#alias litrc="tail -f $ITRC_HOME/log/development.log"
+#alias migrate="bundle exec rake db:migrate"
+#alias migration="bundle exec rails generate migration"
+#alias prodconsole="RAILS_ENV=production bundle exec rails console"
+#alias rollback="bundle exec rake db:rollback"
+#alias routes="bundle exec rake routes"
+##alias test="bundle exec rake test"
+#alias test="bundle exec ruby -Itest"
+#alias tests="bundle exec rake test"
+
+source ~/.aliases
 
 # # git aliases
 # alias g="git"

@@ -15,7 +15,10 @@ export TERM=xterm
 export CLICOLOR=1
 export LSCOLORS='dxgxcxdxcxegedabagacad'
 
-PATH=/usr/local/bin:$PATH
+export LDAP_BIND_USERNAME=\!svn-test
+export LDAP_BIND_PASSWORD=\$Vnt3st2
+
+PATH=/usr/local/share/npm/bin:/usr/local/bin:$PATH
 PATH=$HOME/bin:$HOME/Dropbox/Comcast/bin:$PATH
 export PATH
 

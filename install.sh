@@ -1,20 +1,24 @@
 #!/bin/bash
 
-dir=~/dotfiles
-olddir=~/dotfiles_old
-files="bashrc bash_profile gitconfig"
+FILES="ackrc aliases bashrc bash_profile gemrc gitconfig"
 
-echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
-echo "...done"
+DIR=~/dotfiles
+OLDDIR=~/dotfiles_old
 
-echo "Changing to the $dir directory"
-cd $dir
-echo "...done"
+if [[ ! -e $OLDDIR ]]; then
+  echo "Creating $OLDDIR for backup of any existing dotfiles in ~"
+  mkdir -p $OLDDIR
+fi
 
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+cd $DIR
+
+for FILE in $FILES; do
+    if [[ -h ~/.$FILE ]]; then
+      rm ~/.$FILE
+    else
+      echo "Moving any existing dotfiles from ~ to $OLDDIR"
+      mv ~/.$FILE ~/dotfiles_old/
+    fi
+    echo "~/.$FILE -> $DIR/$FILE"
+    ln -s $DIR/$FILE ~/.$FILE
 done

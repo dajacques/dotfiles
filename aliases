@@ -1,0 +1,7 @@
+alias bm="bundle && bundle exec rake db:migrate"
+alias console="bundle exec rails console"
+alias gems-reindex="ssh -q -t gems PATH=/opt/ruby-1.9.2-p180-gems/bin:$PATH sudo /opt/amtools/bin/geminabox-reindex.rb"
+alias migrate="bundle exec rake db:migrate"
+alias migration="bundle exec rails generate migration"
+alias prodconsole="bundle exec rails console production"
+alias tests="bundle exec rake test"

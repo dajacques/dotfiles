@@ -46,7 +46,7 @@
   r = rebase
   rem = rebase master
   remi = rebase -i master
-  s = status -sb
+  s = status -s
 
 #  l = log --max-count=36 --graph --pretty=format:'%C(yellow)%h%x09%C(cyan bold)%cn%x09%C(green)%cr%x09%Creset%s' --no-merges
 #  l = log --max-count=36 --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan bold)%cn%Creset %C(green)%cr%Creset %C(yellow bold)%d%Creset %s' --abbrev-commit --date=local --no-merges
