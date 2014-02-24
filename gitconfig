@@ -26,7 +26,8 @@
 [log]
   date = relative
 [format]
-  pretty = format:%C(yellow)%h %C(cyan)%cn%x09%C(green)%d %Creset%s %C(red)(%ad)
+  pretty = format:%C(yellow)%h⏐%C(cyan)%cn⏐%C(green)%d %Creset%s %C(red)(%ad)%n
+#  pretty = format:%C(yellow)%h %C(cyan)%cn%x09%C(green)%d %Creset%f %C(red)(%ad)
 [alias]
   a = !git add --all && git s
   b = branch
@@ -36,9 +37,11 @@
   co = checkout
   cob = checkout -b
   com = checkout master
+  comp = !git checkout master && git pull
   cor = checkout release
   d = diff
-  l = log --max-count=36 --no-merges
+  l = !git log --max-count=35 --no-merges | column -t -s '⏐'
+#  l = log --max-count=36 --no-merges
   lg = log --max-count=36 --no-merges --graph
   ll = log --graph
   m = merge
@@ -47,6 +50,7 @@
   rem = rebase master
   remi = rebase -i master
   s = status -s
+  uc = reset --soft HEAD^
 
 #  l = log --max-count=36 --graph --pretty=format:'%C(yellow)%h%x09%C(cyan bold)%cn%x09%C(green)%cr%x09%Creset%s' --no-merges
 #  l = log --max-count=36 --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan bold)%cn%Creset %C(green)%cr%Creset %C(yellow bold)%d%Creset %s' --abbrev-commit --date=local --no-merges
@@ -58,3 +62,5 @@
 #  up = !git fetch origin && git rebase origin/master
 #  ir = !git rebase -i origin/master
 #  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
+[credential]
+	helper = osxkeychain
