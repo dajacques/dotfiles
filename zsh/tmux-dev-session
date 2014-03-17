@@ -1,4 +1,4 @@
-tmux has-session -t $1 2>/dev/null
+tmux list-sessions -F "#S" | grep -q "^$1$"
 if [ $? != 0 ]
 then
   tmux new-session -s $1 -n terminal -d
@@ -9,4 +9,4 @@ then
   tmux send-keys -t $1:2 'vim' C-m
   tmux select-window -t $1:1
 fi
-tmux attach -t $1
+tmux attach-session -t $1
