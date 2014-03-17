@@ -1,0 +1,12 @@
+tmux has-session -t $1 2>/dev/null
+if [ $? != 0 ]
+then
+  tmux new-session -s $1 -n terminal -d
+  tmux send-keys -t $1 "cd $2" C-m
+  tmux send-keys -t $1 "clear" C-m
+  tmux new-window -n vim -t $1
+  tmux send-keys -t $1:2 "cd $2" C-m
+  tmux send-keys -t $1:2 'vim' C-m
+  tmux select-window -t $1:1
+fi
+tmux attach -t $1
