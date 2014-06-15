@@ -11,7 +11,7 @@ Plugin 'bling/vim-airline'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kien/ctrlp.vim'
 
-Plugin 'file:///Users/djacqu001/.vim/david-vim-theme'
+Plugin 'dajacques/vim-colors'
 
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
@@ -39,4 +39,4 @@ syntax enable
 
 let g:airline_powerline_fonts = 1
 
-colorscheme david
+colorscheme basic
