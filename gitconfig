@@ -6,7 +6,7 @@
 [http]
 	sslVerify = false
 [core]
-	editor = sublime --wait
+	editor = vim
 [color]
   ui = auto
   diff = auto

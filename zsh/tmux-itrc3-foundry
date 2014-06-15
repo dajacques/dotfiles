@@ -1,1 +1,8 @@
 tmux-dev-session itrc3-foundry ~/dev/itrc3-foundry
+#tmux ls
+#tmux new-window -t itrc3-foundry -n guard -c ~/dev/itrc3-foundry
+#tmux send-keys -t itrc3-foundry:3 "cd ~/dev/itrc3-foundry" C-m
+#tmux send-keys -t itrc3-foundry:3 "bundle exec guard" C-m
+#tmux set-window-option -t itrc3-foundry:3 -g automatic-rename off
+#tmux set-window-option -t itrc3-foundry:3 -g allow-rename off
+#tmux rename-window -t itrc4-foundry:3 guard

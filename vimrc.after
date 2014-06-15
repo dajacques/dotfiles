@@ -1,8 +1,0 @@
-color codeschool
-
-"hi OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%>80v.\+/
-
-set textwidth=80
-set colorcolumn=+1
-"lakjsdf;lkajsdf;laksjdf;laksjdf;laksdjf;laksdjf;alskdjf;alsdkjfa;sldkfja;sldkfja;sldkfjas;dlkfjasd;lkfj
