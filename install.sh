@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES="ackrc aliases bashrc bash_profile gemrc gitconfig tmux.conf vimrc zsh"
+FILES="ackrc aliases bash_profile bashrc gemrc gitconfig tmux.conf vimrc zsh"
 
 DIR=~/dotfiles
 OLDDIR=~/dotfiles_old
