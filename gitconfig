@@ -64,3 +64,6 @@
 #  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
 [credential]
 	helper = osxkeychain
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

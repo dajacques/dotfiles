@@ -13,11 +13,11 @@ alias runner="bundle exec rails runner"
 alias spring="bundle exec spring"
 alias springrunner="bundle exec spring rails runner"
 alias test="bundle exec ruby -Itest -Ilib"
-#alias tests="bundle exec rake test"
+alias tests="bundle exec rake test"
 #alias tests="bundle exec rake minitest:all:quick"
-alias tests="bundle exec rake minitest:quick"
+#alias tests="bundle exec rake minitest:quick"
 
 #alias router="telnet 192.168.11.1"
-alias storage="ssh -i ~/.ssh/dajacques root@192.168.11.2"
+alias storage="ssh -i ~/.ssh/david root@192.168.11.2"
 
 #alias evcbot=echo "nocvs: Ignore please. I am testing message from commandline (000) -D" | nc -w 1 -u ossapp-cmc07.cmc.co.denver.comcast.net 9454

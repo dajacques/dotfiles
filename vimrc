@@ -29,6 +29,7 @@ set cursorline
 set encoding=utf-8
 set expandtab
 set laststatus=2
+set mouse=a
 set nowrap
 set number
 set shiftwidth=2
