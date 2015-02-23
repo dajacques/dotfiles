@@ -1,1 +1,5 @@
 tmux-dev-session itrc-foundry ~/dev/itrc-foundry
+tmux new-window -t itrc-foundry:4 -n irb
+tmux send-keys -t itrc-foundry:3 "cd $2" C-m
+tmux send-keys -t itrc-foundry:3 "clear" C-m
+tmux send-keys -t itrc-foundry:3 "bundle console" C-m

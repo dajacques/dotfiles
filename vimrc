@@ -16,6 +16,7 @@ Plugin 'dajacques/vim-colors'
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 
+Plugin 'tComment'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'pangloss/vim-javascript'
@@ -34,10 +35,12 @@ set nowrap
 set number
 set shiftwidth=2
 set tabstop=2
-set textwidth=80
+set textwidth=100
 
 syntax enable
 
 let g:airline_powerline_fonts = 1
+
+"map <C-/> :TComment<CR>
 
 colorscheme basic
